@@ -1,0 +1,76 @@
+{ 
+	"usuarios": [
+		{
+            "nome": "Ernestine S. Burr",
+            "email": "ErnestineSBurr@rhyta.com",
+            "idade": 78,
+            "sexo": 1,
+            "ativo": 1,
+            "estudante": false
+        },
+        {
+            "nome": "Paul E. Houck",
+            "email": "PaulEHouck@teleworm.us",
+            "idade": 84,
+            "sexo": 0,
+            "ativo": 1,
+            "estudante": false
+        },
+        {
+            "nome": "Cauã Carvalho Silva",
+            "email": "CauaCarvalhoSilva@armyspy.com",
+            "idade": 23,
+            "sexo": 0,
+            "ativo": 0,
+            "estudante": true
+        },
+        {
+            "nome": "Martim Dias Alves",
+            "email": "MartimDiasAlves@armyspy.com",
+            "idade": 58,
+            "sexo": 0,
+            "ativo": 1,
+            "estudante": false
+        },
+        {
+            "nome": "Isabelle Rodrigues Lima",
+            "email": "IsabelleRodriguesLima@armyspy.com",
+            "idade": 54,
+            "sexo": 1,
+            "ativo": 1,
+            "estudante": false
+        },
+        {
+            "nome": "Fernanda Castro Pereira",
+            "email": "FernandaCastroPereira@armyspy.com",
+            "idade": 35,
+            "sexo": 1,
+            "ativo": 1,
+            "estudante": false
+        },
+        {
+            "nome": "Larissa Oliveira Alves",
+            "email": "LarissaOliveiraAlves@jourrapide.com",
+            "idade": 53,
+            "sexo": 1,
+            "ativo": 0,
+            "estudante": false
+        },
+        {
+            "nome": "Manuela Souza Fernandes",
+            "email": "ManuelaSouzaFernandes@teleworm.us",
+            "idade": 47,
+            "sexo": 1,
+            "ativo": 0,
+            "estudante": false
+        },
+        {
+            "nome": "Thaís Fernandes Lima",
+            "email": "ThaisFernandesLima@armyspy.com",
+            "idade": 35,
+            "sexo": 1,
+            "ativo": 1,
+            "estudante": true
+        }
+	]
+}
