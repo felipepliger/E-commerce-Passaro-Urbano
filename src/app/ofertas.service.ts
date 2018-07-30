@@ -32,4 +32,8 @@ export class OfertasService {
         return this.http.get(this.url + `onde-fica?id=${id}`)
     }
 
+    pesquisaOfertas(pesquisa){
+        return this.http.get(this.url + `ofertas?descricao_oferta_like=${pesquisa}`);
+    }
+
 }
