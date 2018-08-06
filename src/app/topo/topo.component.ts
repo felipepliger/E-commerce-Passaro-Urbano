@@ -12,6 +12,7 @@ import { switchMap, debounceTime, distinctUntilChanged } from 'rxjs/operators';
 export class TopoComponent implements OnInit {
 
   ofertas;
+  pesquisar;
   private subjectPesquisa: Subject<string> = new Subject<string>()
 
   constructor(
@@ -31,6 +32,7 @@ export class TopoComponent implements OnInit {
     );
     
     this.ofertas.subscribe(ofertas => {
+      this.pesquisar = ofertas.json();
       console.log(ofertas.json());
     },
     (erro) => {
