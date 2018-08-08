@@ -18,11 +18,14 @@ export class OndeFicaComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.ofertasService.getOndeFicaOfertaById(this.route.parent.snapshot.params['id']).subscribe(response => {
-      this.ondeFica = response.json()[0].descricao;
-    }, (error) => {
-      console.log(error);
-    });
+    this.route.parent.params.subscribe((parametros: any) => {
+      this.ofertasService.getOndeFicaOfertaById(parametros.id).subscribe(response => {
+        this.ondeFica = response.json()[0].descricao;
+      }, (error) => {
+        console.log(error);
+      });
+    })
+
   }
 
 }

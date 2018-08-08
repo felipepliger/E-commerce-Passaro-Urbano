@@ -41,7 +41,13 @@ export class TopoComponent implements OnInit {
   }
 
   pesquisa(busca) {
+    if(busca == "")
+      this.pesquisar = false;
     this.subjectPesquisa.next(busca);
+  }
+
+  limpaPesquisa() {
+    this.pesquisar = false;
   }
 
 }
