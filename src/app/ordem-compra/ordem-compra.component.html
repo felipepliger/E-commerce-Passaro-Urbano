@@ -1,7 +1,7 @@
 <div class="container">
   <div class="ordem-compra">
     <form novalidate>
-    
+
       <h5>Sua Compra</h5>
       <hr />
 
@@ -11,8 +11,7 @@
         </div>
         <div class="form-group col-sm-6">
           Super Burger
-          <br />
-          Rodízio de Mini-hambúrger com opção de entrada.
+          <br /> Rodízio de Mini-hambúrger com opção de entrada.
         </div>
 
         <div>
@@ -29,15 +28,14 @@
           29.90
         </div>
       </div>
-      
+
       <div class="form-row" style="background: #FAFAFA; padding: 20px; border-bottom: solid 1px #F0F0F0">
         <div class="form-group col-sm-1">
           <img src="/assets/ofertas/4/img1.jpg" class="img-fluid">
         </div>
         <div class="form-group col-sm-6">
           Estância das águas
-          <br />
-          Diversão garantida com piscinas, trilhas e muito mais.
+          <br /> Diversão garantida com piscinas, trilhas e muito mais.
         </div>
 
         <div>
@@ -54,7 +52,7 @@
           31.90
         </div>
       </div>
-      
+
       <div class="form-row">
         <div class="form-group col d-flex justify-content-end">
           <h4>Total do pedido: 61.80</h4>
@@ -69,18 +67,41 @@
       <div class="form-row">
 
         <div class="form-group col-md-6">
-          <input (input)='atualizaEndereco(inputEndereco.value)' #inputEndereco [value]='endereco' type="text" class="form-control is-invalid" placeholder="Endereço" autocomplete="off" minlength="5" required>
+          <input
+            (input)='atualizaEndereco(inputEndereco.value)'
+            #inputEndereco
+            [value]='endereco'
+            type="text"
+            class="form-control {{enderecoValido ? 'is-valid' : 'is-invalid'}}"
+            placeholder="Endereço"
+            autocomplete="off"
+            minlength="5"
+            required>
           <div class="invalid-feedback">Endereço inválido</div>
         </div>
 
         <div class="form-group col-md-2">
-          <input (input)='atualizaNumero(inputNumero.value)' #inputNumero [value]='numero' type="text" class="form-control is-valid" placeholder="Número" autocomplete="off" minlength="1" required>
-          <br />
-          <small class="form-text text-muted">Ok</small>
+          <input 
+            (input)='atualizaNumero(inputNumero.value)'
+            #inputNumero
+            [value]='numero'
+            type="text"
+            class="form-control {{numeroValido ? 'is-valid' : 'is-invalid'}}"
+            placeholder="Número"
+            autocomplete="off"
+            minlength="1"
+            required>
         </div>
 
         <div class="form-group col-md-4">
-          <input (input)='atualizaComplemento(inputComplemento.value)' #inputComplemento [value]='complemento' type="text" class="form-control" placeholder="Complemento" autocomplete="off">
+          <input
+            (input)='atualizaComplemento(inputComplemento.value)'
+            #inputComplemento
+            [value]='complemento'
+            type="text"
+            class="form-control"
+            placeholder="Complemento"
+            autocomplete="off">
         </div>
 
       </div>
@@ -90,9 +111,12 @@
       <hr />
 
       <div class="form-row">
-          
+
         <div class="form-group col-md-3">
-          <select (change)='atualizaFormaPagamento(selectFormaPagamento.value)' #selectFormaPagamento class="form-control is-invalid">
+          <select
+            (change)='atualizaFormaPagamento(selectFormaPagamento.value)'
+            #selectFormaPagamento
+            class="form-control {{formaPagamentoValido ? 'is-valid' : 'is-invalid'}}">
             <option value=''>Selecione uma opção</option>
             <option value='dinheiro' selected="{{ formaPagamento == 'dinehiro' ? 'selected' : ''}}">Dinheiro</option>
             <option value='debito' selected="{{ formaPagamento == 'debito' ? 'selected' : ''}}">Débito</option>

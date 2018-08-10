@@ -14,7 +14,6 @@ export class OrdemCompraComponent implements OnInit {
 
   enderecoValido = false;
   numeroValido = false;
-  complementoValido = false;
   formaPagamentoValido = false;
 
   constructor() { }
@@ -25,22 +24,30 @@ export class OrdemCompraComponent implements OnInit {
 
   atualizaEndereco(endereco) {
     this.endereco = endereco;
-    console.log(this.endereco);
+    if(this.endereco.length > 3)
+      this.enderecoValido = true;
+    else
+      this.enderecoValido = false;
   }
 
   atualizaNumero(numero) {
     this.numero = numero;
-    console.log(this.numero);
+    if(this.numero.length > 0)
+      this.numeroValido = true;
+    else
+      this.numeroValido = false;
   }
 
   atualizaComplemento(complemento) {
     this.complemento = complemento;
-    console.log(this.complemento);
   }
 
   atualizaFormaPagamento(formaPagamento) {
     this.formaPagamento = formaPagamento;
-    console.log(this.formaPagamento);
+    if(this.formaPagamento != null)
+      this.formaPagamentoValido = true;
+    else
+      this.formaPagamentoValido = false;
   }
 
 }
