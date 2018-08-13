@@ -72,7 +72,7 @@
             #inputEndereco
             [value]='endereco'
             type="text"
-            class="form-control {{enderecoValido ? 'is-valid' : 'is-invalid'}}"
+            class="form-control {{enderecoValido ? 'is-valid' : (enderecoValido == undefined) ? '' : 'is-invalid'}}"
             placeholder="Endereço"
             autocomplete="off"
             minlength="5"
@@ -86,7 +86,7 @@
             #inputNumero
             [value]='numero'
             type="text"
-            class="form-control {{numeroValido ? 'is-valid' : 'is-invalid'}}"
+            class="form-control {{numeroValido ? 'is-valid' : (numeroValido == undefined) ? '' : 'is-invalid'}}"
             placeholder="Número"
             autocomplete="off"
             minlength="1"
@@ -116,7 +116,7 @@
           <select
             (change)='atualizaFormaPagamento(selectFormaPagamento.value)'
             #selectFormaPagamento
-            class="form-control {{formaPagamentoValido ? 'is-valid' : 'is-invalid'}}">
+            class="form-control {{formaPagamentoValido ? 'is-valid' : (formaPagamentoValido == undefined) ? '' : 'is-invalid'}}">
             <option value=''>Selecione uma opção</option>
             <option value='dinheiro' selected="{{ formaPagamento == 'dinehiro' ? 'selected' : ''}}">Dinheiro</option>
             <option value='debito' selected="{{ formaPagamento == 'debito' ? 'selected' : ''}}">Débito</option>
@@ -127,7 +127,7 @@
       </div>
 
       <hr />
-      <button type="submit" class="btn btn-primary btn-lg">Cofirmar compra</button>
+      <button type="button" (click)='confirmarCompra()' [disabled]='formEstado' class="btn btn-primary btn-lg">Cofirmar compra</button>
     </form>
   </div>
 </div>
