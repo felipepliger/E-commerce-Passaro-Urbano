@@ -1,11 +1,12 @@
 import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { retry } from 'rxjs/operators';
+import { url_api } from './api';
 
 @Injectable()
 export class OfertasService {
 
-    private url = 'http://localhost:3000/';
+    private url = url_api;
 
     constructor(
         private http: Http

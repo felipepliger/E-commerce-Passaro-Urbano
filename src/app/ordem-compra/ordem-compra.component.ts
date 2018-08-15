@@ -78,7 +78,11 @@ export class OrdemCompraComponent implements OnInit {
       'complemento' : this.complemento,
       'formaPagamento' : this.formaPagamento
     };
-    this._ordem_compra.efetivarCompra(dados);
+    this._ordem_compra.efetivarCompra(dados).subscribe(response => {
+      console.log(response.json());
+    },(error) => {
+      console.log(error);
+    });
   }
 
 }
